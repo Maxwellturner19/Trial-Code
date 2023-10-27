@@ -1,0 +1,23 @@
+Game to test time for user to solve maths Question
+
+import time
+import random
+
+rand_n1 = random.randint(1,20) # create a random number between 1 and 20
+rand_n2 = random.randint(1,20) # create a random number between 1 and 20
+solution = rand_n1 + rand_n2
+
+input('Welcome to the math challenge! Press Enter when ready...') # wait for user to start the challenge
+
+t0 = time.time()
+
+print(str(rand_n1) + " + " + str(rand_n2))
+
+answer = input("Type in your answer and hit Enter: ")
+
+t1 = time.time()
+
+time = round(t1 - t0,2)
+
+print("The answer is " + str(solution))
+print("It took you " + str(time) + " seconds to solve the problem.")
